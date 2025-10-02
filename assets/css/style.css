@@ -12,9 +12,11 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 img{
     width: 100%;
+    vertical-align: bottom;
 }
 ul, li, ol {
     list-style: none;
@@ -26,10 +28,19 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: paleturquoise;
     font-family: 'League Spartan', sans-serif;
 }
-.wrap{max-width: 300px; margin: 0 auto;}
+h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.3rem;
+}
+.wrap{max-width: 310px; margin: 0 auto;}
 .desktop{display: none;}
 
 header {
@@ -50,9 +61,6 @@ header .arrows .arrow{
     padding: 1rem;
     background-color: var(--noir);
 }
-header .arrows .arrow img {
-    width: 75%
-}
 header .wrap nav{
     display: flex;
     padding: 1rem 0;
@@ -71,7 +79,7 @@ header .wrap #imgMenu {
     z-index: 3;
 }
 header .wrap #openmenu:checked~label{
-    top: 2rem;
+    top: 1.8rem;
 }
 header .wrap #openmenu:checked~label>img {
     content: url('../images/icon-close.svg');
@@ -91,4 +99,44 @@ header .wrap #openmenu:checked~ul>li{
 header .wrap #openmenu:checked~ul>li>a{
     color: var(--noir);
     text-transform: lowercase
+}
+#discover {
+    padding: 3rem 0;
+}
+#discover p{
+    padding: 1rem 0;
+    color: var(--gris-clair);
+}
+#discover a{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+#discover a p {
+    color: var(--noir);
+}
+#discover a:hover p {
+    text-decoration: underline;
+    transition: .4s;
+}
+#discover a .image {
+    padding: 1rem;
+}
+#discover a .image img{
+    vertical-align: middle;
+}
+#about {
+    padding: 3rem 0;
+}
+#about p{
+    padding: 1rem 0;
+    color: var(--gris-clair);
+}
+
+
+
+@media screen and (min-width:576px;){
+    
 }
